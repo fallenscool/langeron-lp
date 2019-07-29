@@ -1,0 +1,2 @@
+"use strict";window.onload=function(){};
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5qcyJdLCJuYW1lcyI6WyJ3aW5kb3ciLCJvbmxvYWQiXSwibWFwcGluZ3MiOiJhQUFBQSxPQUFPQyxPQUFTIiwiZmlsZSI6ImFwcC5qcyIsInNvdXJjZXNDb250ZW50IjpbIndpbmRvdy5vbmxvYWQgPSBmdW5jdGlvbigpIHt9OyJdfQ==

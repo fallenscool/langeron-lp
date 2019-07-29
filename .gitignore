@@ -1,0 +1,9 @@
+/node_modules
+/build
+/idea
+/.vscode
+/src/libs
+*.DS_Store
+package-lock.json
+config.php
+admin/config.php
