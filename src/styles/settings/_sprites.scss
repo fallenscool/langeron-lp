@@ -1,6 +1,39 @@
 .icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  fill: $svgColor;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: $svgColor;
+}
+
+.icon-arrow {
+	font-size:(31.490000000000002/10)*1rem;
+	width:(31.490000000000002/31.490000000000002)*1em;
+}
+.icon-chevron {
+	font-size:(185.34/10)*1rem;
+	width:(185.34/185.34)*1em;
+}
+.icon-email {
+	font-size:(512/10)*1rem;
+	width:(512/512)*1em;
+}
+.icon-facebook {
+	font-size:(288.86/10)*1rem;
+	width:(288.86/288.86)*1em;
+}
+.icon-instagram {
+	font-size:(511/10)*1rem;
+	width:(511/511)*1em;
+}
+.icon-location {
+	font-size:(477/10)*1rem;
+	width:(477/477)*1em;
+}
+.icon-mess {
+	font-size:(223.04/10)*1rem;
+	width:(223.04/223.04)*1em;
+}
+.icon-phone {
+	font-size:(29.729999999999997/10)*1rem;
+	width:(29.729999999999997/29.729999999999997)*1em;
 }

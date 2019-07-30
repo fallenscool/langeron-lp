@@ -10,6 +10,10 @@
   padding-left: 30px;
   margin-right: auto;
   margin-left: auto;
+
+  @include middle-tablet {
+    padding: 0 15px;
+  }
 }
 
 .row {
@@ -21,7 +25,7 @@
 }
 
 .col {
-  position: relative;
+  // position: relative;
   max-width: 100%;
   min-height: 1px;
   padding-right: 15px;

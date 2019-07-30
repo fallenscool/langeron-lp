@@ -1,0 +1,359 @@
+.apparts {
+  margin-bottom: 100px;
+  padding: 15px 0;
+
+  @include desktop-little {
+    margin-bottom: 50px
+  }
+
+  &__slider {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 25px 50px;
+    max-width: 1430px;
+    margin: 0 auto;
+    position: relative;
+
+    @include desktop-little {
+      padding: 20px;
+    }
+
+    @include menu-tablet {
+      background-size: 100% 100%;
+    }
+
+    @include tablet {
+      padding: 0;
+    }
+  }
+
+  .slider {
+    &__wrap {
+      width: 100%;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      padding: 100px 50px 100px 150px;
+
+      @include desktop-little {
+        padding: 50px;
+        align-items: center;
+      }
+
+      @include menu-tablet {
+        padding: 50px 30px;
+      }
+
+      @include middle-tablet {
+        align-items: center;
+        flex-direction: column;
+      }
+
+      @include tablet {
+        padding: 25px;
+      }
+    }
+
+    &__img {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include desktop-little {
+        top: 0;
+        position: unset;
+      }
+    }
+
+    &__arrows {
+      bottom: 30px;
+      left: 25%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 280px;
+      position: absolute;
+
+      @include desktop-little {
+        bottom: 90px;
+        right: 10%;
+        left: unset;
+      }
+
+      @include middle-tablet {
+        bottom: 40px;
+        right: calc(50% - 140px);
+      }
+
+      @include tablet {
+        bottom: 20px;
+        width: 160px;
+        right: calc(50% - 80px);
+      }
+    }
+
+    &__arrow {
+      height: 60px;
+      width: 60px;
+      border: 2px solid $color-blue-2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+
+      @include tablet {
+        height: 30px;
+        width: 30px;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        bottom: -2px;
+        width: 20px;
+        height: 2px;
+        right: 10px;
+        background-color: $color-gray;
+
+      }
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: $color-gray;
+        top: 7px;
+        left: 7px;
+        z-index: -1;
+      }
+
+      &-separ {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        font-weight: $font-medium;
+        margin: 0 30px;
+
+        @include tablet {
+          font-size: 1.4rem;
+          line-height: 1.8rem;
+        }
+      }
+
+      &-icon {
+        font-size: 3rem;
+        fill: $color-blue-2;
+      }
+
+      &-prev {
+        .icon {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .item {
+    &__info {
+      width: 50%;
+      max-width: 470px;
+      padding-right: 40px;
+
+      @include desktop-little {
+        padding-right: 20px;
+      }
+
+      @include middle-tablet {
+        width: 100%;
+        max-width: unset;
+        padding-bottom: 20px;
+        padding-right: 0;
+      }
+    }
+
+    &__img {
+      width: 700px;
+      height: 580px;
+      position: relative;
+
+      @include desktop-little {
+        height: 100%;
+        width: 50%;
+      }
+
+      @include middle-tablet {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 50px;
+      }
+
+      @include little-phone {
+        height: 200px;
+      }
+    }
+
+    &__title {
+      position: relative;
+
+      @include tablet {
+        text-align: center;
+      }
+
+      &:before {
+        top: -70px;
+        left: -60px;
+        z-index: -1;
+        position: absolute;
+        content: '';
+        width: 210px;
+        height: 178px;
+        background-color: $color-gray;
+
+        @include desktop-little {
+          top: -40px;
+          left: -20px;
+        }
+
+        @include tablet {
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      &-br {
+        position: absolute;
+        top: -90px;
+        left: -80px;
+
+        @include desktop-little {
+          top: -50px;
+          left: -30px;
+        }
+
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &-name {
+        font-size: 7.2rem;
+        font-family: $font-playfair;
+        font-weight: $font-bold;
+
+        @include tablet {
+          font-size: 4rem;
+        }
+      }
+
+      &-sub {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        font-weight: $font-light;
+
+        @include tablet {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    &__desc {
+      padding-top: 40px;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      font-weight: $font-light;
+
+      @include tablet {
+        padding-top: 20px;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+      }
+
+      @include little-phone {
+        padding-bottom: 20px;
+      }
+    }
+
+    &__link {
+      margin-top: 60px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      text-transform: uppercase;
+      color: $color-blue-2;
+      width: 270px;
+      height: 70px;
+      border: 2px solid $color-blue-2;
+      position: relative;
+      padding-bottom: 20px;
+      transition: 0.15s all linear;
+
+      @include desktop-little {
+        margin-top: 10px;
+      }
+
+      @include tablet {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        width: 200px;
+        height: 40px;
+        padding-bottom: 0;
+        margin: 0 auto;
+        align-items: center;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        bottom: -2px;
+        width: 90px;
+        height: 2px;
+        right: 40px;
+        background-color: $color-gray;
+        transition: 0.15s all linear;
+      }
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: $color-gray;
+        top: 10px;
+        left: 10px;
+        z-index: -1;
+        transition: 0.15s all linear;
+
+        @include tablet {
+          top: 5px;
+          left: 5px;
+        }
+      }
+
+      &:hover {
+        color: $color-white;
+
+        &:after {
+          background-color: $color-blue-2;
+        }
+
+        &:before {
+          background-color: $color-blue-2;
+        }
+      }
+
+    }
+  }
+}

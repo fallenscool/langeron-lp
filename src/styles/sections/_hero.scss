@@ -1,0 +1,307 @@
+@import "../../libs/slick-carousel/slick/slick.scss";
+
+.hero {
+  position: relative;
+  margin-bottom: 100px;
+
+  @include desktop-little {
+    min-height: 600px;
+    margin-bottom: 50px;
+  }
+
+  @include menu-tablet {
+    min-height: unset;
+    padding: 20px 0;
+  }
+
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background-color: $color-blue-2;
+
+    @include menu-tablet {
+      display: none;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    max-width: 992px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+
+    @include desktop-notebook {
+      max-width: 700px;
+    }
+
+    @include menu-tablet {
+      width: 100%;
+      max-width: unset;
+      top: 0;
+      left: 0;
+    }
+
+    .slider {
+      &__wrap {
+        width: 100%;
+      }
+
+      &__item {
+        height: 690px;
+
+        @include desktop-notebook {
+          height: 500px;
+        }
+
+        @include menu-tablet {
+          height: 600px;
+        }
+
+        @include menu-tablet {
+          height: 400px;
+        }
+
+        @include phone {
+          height: 300px;
+        }
+      }
+
+      &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &__arrows {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 30px;
+        left: -150px;
+        width: 120px;
+
+        @include desktop-notebook {
+          z-index: 10;
+        }
+
+        @include menu-tablet {
+          left: calc(50% - 60px);
+          bottom: 50px;
+        }
+
+        @include little-phone {
+          right: 20px;
+          left: unset;
+        }
+      }
+
+      &__arrow {
+        cursor: pointer;
+
+        &-icon {
+          fill: $color-blue-2;
+          font-size: 3rem;
+
+          @include desktop-notebook {
+            fill: $color-white;
+          }
+        }
+
+        &-prev {
+          .icon {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    max-width: 450px;
+    width: 100%;
+    padding-top: 40px;
+    z-index: 2;
+    position: relative;
+
+    @include desktop-notebook {
+      margin-left: 60px;
+    }
+
+    @include desktop-little {
+      width: 100%;
+      max-width: unset;
+      padding-top: 20px;
+    }
+
+    @include menu-tablet {
+      max-width: unset;
+      padding: 0;
+      margin-left: 0;
+      padding: 20px;
+      min-height: 350px;
+
+      &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: rgba($color-black, 0.5);
+      }
+    }
+
+    @include phone {
+      min-height: 250px;
+    }
+
+    @include extra-phone-big {
+      padding: 10px;
+    }
+  }
+
+  &__title {
+    font-size: 7.2rem;
+    line-height: 7.2rem;
+    font-family: $font-playfair;
+    font-weight: $font-bold;
+    color: $color-white;
+    display: block;
+    padding-top: 70px;
+    position: relative;
+
+    @include desktop-little {
+      padding-top: 0;
+    }
+
+    @include phone {
+      font-size: 4rem;
+      line-height: normal;
+    }
+
+    &-br {
+      position: absolute;
+      top: 0;
+      left: -80px;
+
+      @include desktop-little {
+        top: -40px;
+      }
+
+      @include menu-tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__desc {
+    font-size: 3rem;
+    line-height: 3.6rem;
+    font-weight: $font-light;
+    color: $color-black;
+    padding: 25px 0 40px;
+
+    @include desktop-little {
+      padding: 10px 0;
+    }
+
+    @include menu-tablet {
+      color: $color-white;
+      padding-bottom: 50px;
+    }
+
+    @include phone {
+      font-size: 2.2rem;
+      line-height: normal;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__social {
+    padding-top: 70px;
+    display: flex;
+    align-items: center;
+
+    @include desktop-little {
+      padding-top: 20px;
+    }
+  }
+}
+
+.social {
+  &__link {
+    width: 45px;
+    height: 45px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 7.5px;
+    transition: 0.15s all linear;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      border-color: $color-white;
+    }
+  }
+
+  &__icon {
+    font-size: 2rem;
+  }
+}
+
+.scroll {
+  position: absolute;
+  left: -100px;
+  bottom: 30px;
+
+  transform: rotate(90deg);
+
+  @include desktop-little {
+    display: none;
+  }
+
+  &__tx {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: $color-white;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: 38px;
+      left: calc(100% + 10px);
+      background-color: $color-white;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: 40px;
+      left: calc(100% + 48px);
+      background-color: $color-blue-2;
+    }
+  }
+}

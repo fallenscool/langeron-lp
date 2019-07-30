@@ -1,15 +1,15 @@
-module.exports = function () {
-
+module.exports = function() {
   const sprite = {
-    src: $.path.src + 'assets/svg/**/*.svg',
+    src: $.path.src + "assets/svg/**/*.svg",
     build: $.path.src,
-    svg: './../default/assets/svg/sprite.svg',
-    scss: './styles/settings/_sprites.scss',
-    templ: $.path.src + 'styles/settings/template.scss'
-  }
+    svg: "./../public/assets/svg/sprite.svg",
+    scss: "./styles/settings/_sprites.scss",
+    templ: $.path.src + "styles/settings/template.scss"
+  };
 
-  $.gulp.task('sprite', function () {
-    return $.gulp.src(sprite.src)
+  $.gulp.task("sprite", function() {
+    return $.gulp
+      .src(sprite.src)
       .pipe(
         $.gp.svgmin({
           js2svg: {
@@ -19,7 +19,7 @@ module.exports = function () {
       )
       .pipe(
         $.gp.cheerio({
-          run: function ($) {
+          run: function($) {
             $("[fill]").removeAttr("fill");
             $("[stroke]").removeAttr("stroke");
             $("[style]").removeAttr("style");
@@ -61,5 +61,5 @@ module.exports = function () {
           stream: true
         })
       );
-  })
-}
+  });
+};

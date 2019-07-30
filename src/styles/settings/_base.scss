@@ -6,9 +6,17 @@
 html {
   font-size: 10px;
   font-family: $font-family;
-  font-weight: $font-book;
+  font-weight: $font-normal;
   color: $color-black;
   scroll-behavior: smooth;
+
+  @include tablet {
+    font-size: 9px;
+  }
+
+  @include little-phone {
+    font-size: 8px;
+  }
 }
 
 img {
@@ -21,12 +29,5 @@ a {
 }
 
 section {
-  padding: 30px 0;
-}
-
-.page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: space-between;
+  padding: 50px 0;
 }

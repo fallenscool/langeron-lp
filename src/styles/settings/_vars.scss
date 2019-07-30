@@ -1,17 +1,21 @@
-$color-white: #ffffff;
-$color-red: #FC0000;
-$color-blue: #DDE6EF;
-$color-blue-2: #4267B2;
-$color-beige: #E9E9DE;
-$color-gray: #E2E2E2;
-$color-gray-2: #707070;
-$color-yellow: #EAD162;
-$color-yellow-2: #D5B353;
-$color-green: #439C00;
-$color-purple: #9C0078;
-$color-black: #000000;
-$color-black-2: #121212;
-$color-pink: #ECDEFF;
+$color-white: #f9fafb;
+$color-gray: #e5dcda;
+$color-gray-2: #cbd9df;
+$color-blue: #63ceff;
+$color-blue-2: #8baab7;
+$color-blue-3: #30536f;
+$color-blue-4: #68909f;
+$color-black: #333333;
+
+// $color-red: #FC0000;
+// $color-gray: #E2E2E2;
+// $color-gray-2: #707070;
+// $color-yellow: #EAD162;
+// $color-yellow-2: #D5B353;
+// $color-green: #439C00;
+// $color-purple: #9C0078;
+// $color-black-2: #121212;
+// $color-pink: #ECDEFF;
 
 
 $svgColor:$color-white;
@@ -20,19 +24,18 @@ $transition: all 0.3s linear;
 
 $box-shadow:0 3px 20px rgba($color-black, 0.3);
 
-$font-family:'FuturaPT',
+$font-family:'Montserrat',
 sans-serif;
 
-$font-myriadpro: 'MyriadPro',
+$font-playfair:'PlayfairDisplay',
 sans-serif;
 
-$font-museo: 'Museo',
-sans-serif;
-
+$font-thin: 100;
+$font-extralight: 200;
 $font-light: 300;
-$font-book: 350;
-$font-demi: 450;
+$font-normal: 400;
 $font-medium: 500;
-$font-bold: 600;
-$font-extrabold: 650;
-$font-heavy: 900;
+$font-semibold: 600;
+$font-bold: 700;
+$font-extrabold: 800;
+$font-black: 900;

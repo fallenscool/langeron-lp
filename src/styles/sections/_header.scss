@@ -1,3 +1,214 @@
 .header {
   padding: 30px 0;
+  position: relative;
+
+  @include middle-tablet {
+
+    padding: 15px 0;
+  }
+
+  &__row {
+    align-items: center;
+    justify-content: space-between;
+
+    @include desktop-little {
+      justify-content: center;
+    }
+
+    @include middle-tablet {
+      justify-content: space-between;
+    }
+
+    @include little-phone {
+      justify-content: center;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop-little {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding-top: 20px;
+    }
+
+    @include middle-tablet {
+      width: auto;
+      padding-top: 0;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    @include little-phone {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    font-weight: $font-medium;
+    display: flex;
+    align-items: center;
+    padding: 7px 0;
+    transition: 0.15s all linear;
+
+    @include desktop-little {
+      padding: 0 10px;
+    }
+
+    @include middle-tablet {
+      padding: 5px 0;
+    }
+
+    @include tablet {
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+
+    &:hover {
+      color: $color-blue;
+
+      .icon {
+        fill: $color-blue;
+
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 2.6rem;
+    width: 1em;
+    fill: $color-blue-2;
+    margin-right: 12px;
+    transition: 0.15s all linear;
+  }
+}
+
+.logo {
+  &__link {
+    display: block;
+    height: 100px;
+    width: 100px;
+    transition: 0.3s all linear;
+
+    &:hover {
+      box-shadow: $box-shadow;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+
+  @include middle-tablet {
+    z-index: 10;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: $color-blue-2;
+    padding: 20px;
+    align-items: flex-start;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: 0.3s all linear;
+  }
+
+  &.open {
+    transform: scaleX(1);
+  }
+
+  &__btn {
+    display: none;
+    width: 30px;
+    height: 20px;
+    position: relative;
+
+    @include middle-tablet {
+      display: block;
+    }
+
+    @include little-phone {
+      position: absolute;
+      right: 15px;
+    }
+
+    .br {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: $color-blue-2;
+      transition: 0.3s all linear;
+      transform-origin: left;
+
+      &-1 {
+        top: 0;
+      }
+
+      &-2 {
+        top: calc(50% - 1.5px);
+      }
+
+      &-3 {
+        bottom: 0;
+      }
+    }
+
+    &.open {
+      .br {
+
+        &-1 {
+          transform: rotate(45deg) translateY(-3px);
+        }
+
+        &-2 {
+          width: 0;
+        }
+
+        &-3 {
+          transform: rotate(-45deg) translateY(3px);
+        }
+      }
+    }
+  }
+
+  &__link {
+    font-weight: $font-light;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    display: block;
+    padding: 15px;
+    transition: 0.15s all linear;
+
+    @include middle-tablet {
+      color: $color-white;
+      padding: 5px;
+    }
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
 }

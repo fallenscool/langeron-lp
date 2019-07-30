@@ -1,0 +1,207 @@
+.benefits {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 100px 0;
+  position: relative;
+  margin-bottom: 100px;
+
+  @include desktop-little {
+    padding: 50px 0;
+    margin-bottom: 50px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 80px;
+    background-color: #ffffff;
+
+    @include desktop-little {
+      width: 25%;
+      height: 50px;
+    }
+
+    @include phone {
+      display: none;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 600px;
+    height: 80px;
+    background-color: #ffffff;
+
+    @include desktop-little {
+      width: 25%;
+      height: 50px;
+    }
+
+    @include phone {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-family: $font-playfair;
+    font-weight: $font-bold;
+    font-size: 7.2rem;
+
+    @include desktop-little {
+      text-align: center;
+    }
+
+    @include phone {
+      font-size: 4rem;
+    }
+
+    &-br {
+      position: absolute;
+      top: 12px;
+      left: 15%;
+      z-index: 2;
+
+      @include desktop-little {
+        display: none;
+      }
+    }
+  }
+
+  &__row {
+    padding: 80px 0;
+
+    @include desktop-little {
+      padding-top: 40px;
+    }
+
+    @include phone {
+      padding: 0;
+      padding-top: 30px;
+    }
+
+  }
+
+  &__item {
+    flex: 0 0 33.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-of-type(2) {
+      position: relative;
+
+      .benefits__content {
+        position: absolute;
+        height: 100%;
+        width: 270px;
+        top: 80px;
+
+        @include desktop-block {
+          position: relative;
+          height: unset;
+          width: unset;
+          top: unset;
+        }
+      }
+    }
+
+    @include phone {
+      flex: 0 0 auto;
+      width: 33.3%;
+      padding: 0 5px;
+    }
+  }
+
+  &__content {
+    padding: 80px 60px;
+    background-color: $color-gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @include desktop-block {
+      padding: 40px;
+    }
+
+    @include phone {
+      padding: 30px 15px;
+    }
+
+    @include little-phone {
+      padding: 15px;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 20px;
+      left: 20px;
+      width: 80px;
+      height: 80px;
+      border: 3px solid $color-white;
+      border-bottom: none;
+      border-right: none;
+
+      @include phone {
+        display: none;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      bottom: -30px;
+      right: -30px;
+      width: 190px;
+      height: 280px;
+      border: 3px solid $color-white;
+      border-top: none;
+      border-left: none;
+
+      @include desktop-block {
+        display: none;
+      }
+    }
+  }
+
+  &__desc {
+    padding-top: 45px;
+    font-weight: $font-medium;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: $color-blue-3;
+    text-align: center;
+
+    @include middle-tablet {
+      padding-top: 15px;
+    }
+
+    @include phone {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+
+    @include middle-tablet {
+      width: 100%;
+    }
+
+    @include phone {
+      height: 60px;
+      width: 60px;
+    }
+  }
+}

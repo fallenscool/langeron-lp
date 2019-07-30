@@ -1,0 +1,195 @@
+.contacts {
+  padding-top: 150px;
+  margin-top: 50px;
+  position: relative;
+
+  @include desktop-little {
+    margin-top: 150px;
+    padding: 50px 0;
+  }
+
+  @include menu-tablet {
+    margin-top: 100px;
+  }
+
+  @include tablet {
+    margin-top: 50px;
+    padding: 25px 0;
+  }
+
+  &__row {
+    position: relative;
+    padding-bottom: 50px;
+
+    @include menu-tablet {
+      flex-direction: column;
+    }
+
+    @include tablet {
+      padding-bottom: 25px;
+    }
+  }
+
+  &__map {
+    right: 0;
+    top: 0;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include desktop-little {
+      width: 60%;
+    }
+
+    @include menu-tablet {
+      position: unset;
+      width: 100%;
+      height: 400px;
+    }
+
+    @include little-phone {
+      height: 250px;
+    }
+  }
+
+  &__info {
+    @include menu-tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-br {
+      position: absolute;
+      z-index: -1;
+      width: 900px;
+      height: 100%;
+      left: -280px;
+
+      @include desktop-little {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 6rem;
+    font-family: $font-playfair;
+    font-weight: $font-bold;
+    position: relative;
+
+    @include tablet {
+      font-size: 4rem;
+    }
+
+    &:after {
+      content: '';
+      width: 50px;
+      height: 180px;
+      border: 3px solid $color-gray;
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      border-right: none;
+
+      @include desktop-little {
+        left: -30px;
+      }
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &:before {
+      content: '';
+      width: 160px;
+      height: 50px;
+      border: 3px solid $color-gray;
+      position: absolute;
+      top: -100px;
+      left: -50px;
+      border-left: none;
+      border-bottom: none;
+
+      @include desktop-little {
+        left: -30px;
+      }
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &-bg {
+      z-index: -1;
+      width: 210px;
+      height: 180px;
+      position: absolute;
+      top: -75px;
+      left: -70px;
+      background-color: $color-gray-2;
+
+      @include desktop-little {
+        left: -15px;
+      }
+
+      @include tablet {
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    padding-left: 10px;
+
+    @include menu-tablet {
+      padding: 25px 0;
+      padding-top: 40px;
+    }
+  }
+
+  &__item {
+    padding: 10px 0;
+  }
+
+  &__link {
+    font-size: 1.8rem;
+    font-weight: $font-medium;
+    transition: 0.15s all linear;
+
+    &:hover {
+      color: $color-blue-2;
+    }
+  }
+
+  &__icon {
+    margin-right: 20px;
+    font-size: 2.5rem;
+    fill: $color-blue-2;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+  }
+
+  .social__link {
+    &:hover {
+      border-color: $color-blue-2;
+    }
+  }
+
+  .social__icon {
+    fill: $color-blue-2;
+  }
+}
